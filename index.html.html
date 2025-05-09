@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Obra App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f1c2e, #1a2f4f);
+      color: white;
+      height: 100%;
+    }
+
+    .page-wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .container {
+      display: flex;
+      background-color: #1c2d45;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      max-width: 900px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #0f1c2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #1c2d45;
+    }
+
+    h2 {
+      color: #e4d1b9;
+      margin-bottom: 30px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .input-icon {
+      position: relative;
+    }
+
+    .input-icon i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #555;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 12px 12px 38px;
+      border-radius: 8px;
+      border: none;
+      background-color: #e4d1b9;
+      color: #1c2d45;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background-color: #e4d1b9;
+      color: #1c2d45;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d6c2a6;
+    }
+
+    .footer-text {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .footer-text a {
+      color: #e4d1b9;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+      color: #aaa;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<div class="page-wrapper">
+  <div class="container">
+    <div class="left">
+      <img width="200%" src="obra.jpg" alt="Obra App" />
+    </div>
+    <div class="right">
+      <h2>Bem-vindo ao Obra App</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <div class="input-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+          </div>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <div class="footer-text">
+        Ainda não tem conta? <a href="#">Cadastre-se</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    © 2025 Obra App. Todos os direitos reservados.
+  </footer>
+</div>
+</html>
